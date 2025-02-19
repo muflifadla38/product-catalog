@@ -9,7 +9,6 @@
 - PHP >= 8.1
 - Laravel >= 10
 - Composer
-- NPM
 
 
 ## Installation and Setup

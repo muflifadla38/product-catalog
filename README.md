@@ -1,4 +1,4 @@
-# Marketplace Katering
+# Product Catalog
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![PHP Version](https://img.shields.io/badge/PHP-8.1-blue)

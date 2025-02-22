@@ -15,8 +15,11 @@ class ProductController extends Controller
 {
     public function index(Request $request)
     {
-        $products = Product::with('productCategory:id,name')->filter($request)->paginate(10);
         $categories = ProductCategory::get(['id', 'name']);
+        $products = Product::with('productCategory:id,name')
+            ->filter($request)
+            ->paginate(10)
+            ->setPath('');
 
         if ($request->ajax()) {
             return view('partials.product-table', compact('products'))->render();

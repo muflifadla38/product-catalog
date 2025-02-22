@@ -78,8 +78,6 @@
             }
 
             function updateContent(url = null) {
-                console.log(productCategory.val());
-
                 const params = new URLSearchParams({
                     search: search.val(),
                     product_category_id: productCategory.val()
@@ -120,7 +118,6 @@
                         link.click();
 
                         window.URL.revokeObjectURL(url);
-                        exportWindow.close();
                     },
                 });
             });

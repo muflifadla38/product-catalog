@@ -1,0 +1,67 @@
+.invert {
+    -webkit-filter: invert(1);
+    filter: invert(0.5);
+}
+
+.sidebar {
+    background-color: #dc3545;
+    color: white;
+    height: 100vh;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar .active {
+    background-color: #c82333;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+}
+
+.nav-link:hover {
+    color: #ffc0cb;
+}
+
+.page-link {
+    border: 0;
+    color: #dc3545;
+    margin-right: 0.5rem;
+}
+
+.page-link:hover {
+    border-radius: 0.25rem;
+}
+
+.active > .page-link {
+    background-color: transparent;
+    color: #dc3545;
+    font-weight: 500;
+}
+
+.disabled > .page-link {
+    background-color: transparent;
+    color: #dc3545;
+    opacity: 0.5;
+}
+
+a {
+    color: #428bca;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: #2a6496;
+    text-decoration: none;
+}
+
+.dz-progress {
+    display: none;
+}
+
+.profile-pencil {
+    margin-left: -1.6rem;
+    margin-bottom: -0.4rem;
+}

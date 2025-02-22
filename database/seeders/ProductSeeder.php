@@ -86,5 +86,7 @@ class ProductSeeder extends Seeder
         ];
 
         Product::insert($products);
+
+        // Product::factory(100)->create();
     }
 }

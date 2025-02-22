@@ -49,6 +49,30 @@ Follow these steps to set up the project on your local machine:
    ```bash
    php artisan serve
 
+## Configuration
+Update ``.env`` file:
+```bash
+DB_CONNECTION=pgsql
+DB_HOST=your_postgres_host
+DB_PORT=5432
+DB_DATABASE=your_db_name
+DB_USERNAME=your_db_user
+DB_PASSWORD=your_db_password
+```
+
+## Default User Credentials
+```
+email: admin@gmail.com
+password: pass1234
+```
+
+## API Endpoints (JWT)
+Before using this API, you need to set your request header to ``Accept: application/json``.
+```bash
+POST    /api/v1/login     Login
+POST   /api/v1/logout     Logout
+GET    /api/v1/profile    Show user profile
+```
 
 ## Usage
 This dashboard provides a foundation for product catalog. You can extend it by adding your own components, modules, and features.

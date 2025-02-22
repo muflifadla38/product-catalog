@@ -22,7 +22,7 @@ class UpdateProductRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|unique:products',
+            'name' => "required|unique:products,name,{$this->product->id}",
             'product_category_id' => 'required|exists:product_categories,id',
             'purchase_price' => 'required|numeric',
             'selling_price' => 'required|numeric',

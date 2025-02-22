@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +16,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::controller(AuthController::class)->middleware('guest')->group(function () {
+    Route::get('/', 'index')->name('auth.index');
+    Route::post('login', 'login')->name('auth.login');
+});
+
+Route::middleware('auth')->group(function () {
+    Route::post('logout', [AuthController::class, 'logout'])->name('auth.logout');
+
+    Route::get('profile', [ProfileController::class, 'index'])->name('profile.index');
+
+    Route::prefix('product')->name('product.')->group(function () {
+        Route::resource('lists', ProductController::class)->except('show')->parameter('lists', 'product');
+        Route::post('export', [ProductController::class, 'export'])->name('export');
+    });
 });
